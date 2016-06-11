@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conversor de coordenadas</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="code.js"></script>
+</head>
+<body>
+	<section id="1">
+		<h1>Conversor de coordenadas</h1>
+		<p>¿desde que tipo de coordenadas deseas convertir?</p>
+		<input type="number" id="primero" >
+		<input type="number" id="segundo" >
+		<input type="number" id="tercero" >
+		<form name="desde">
+	        <input type="radio" name="R" value="a">Rectangulares</li>
+	        <input type="radio" name="R" value="b">Esféricas</li>
+	        <input type="radio" name="R" value="c">Cilíndricas</li>
+	   	</form>
+	</section>
+
+	<section id="2">
+		<div class="resultado" id="uno">r</div>
+		<div class="resultado" id="dos">θ</div>
+		<div class="resultado" id="tres">z</div>
+		<form name="hasta">
+	        <input type="radio" name="R" value="a">Rectangulares</li>
+	        <input type="radio" name="R" value="b">Esféricas</li>
+	        <input type="radio" name="R" value="c">Cilíndricas</li>
+	   	</form>
+	</section>
+
+	<input type="button" value="Convertir" id="convertir">
+	<input type="button" value="Limpiar" id="limpiar">
+
+
+	<script>
+		inicio();
+	</script>
+</body>
+</html>
