@@ -19,17 +19,27 @@ function inicio (){
 	var tres = document.getElementById("tres");
 
  	
-
- 	if(document.desde.R[0].checked && document.hasta.R[2].checked){
+	if(document.desde.R[0].checked && document.hasta.R[0].checked){
+		alert("No necesitas hacer la conversión de rectangulares a rectangulares")
+	}
+ 	else if(document.desde.R[0].checked && document.hasta.R[1].checked){
+		var p = Math.sqrt(Math.pow(primero, 2) + Math.pow(segundo, 2)+Math.pow(tercero, 2));
+		var teta = Math.atan(segundo/primero);
+		var fi = Math.acos(tercero / p);
+		uno.innerHTML = "p = "+p;
+	 	dos.innerHTML = " θ = "+teta;
+	 	tres.innerHTML =" φ = "+fi;
+	}
+	else if (document.desde.R[0].checked && document.hasta.R[2].checked){
 		var r = Math.pow(primero, 2) + Math.pow(segundo, 2);
 	 	var teta = Math.atan(segundo/primero); 
 	 	var z = tercero;
-	 	uno.innerHTML = r;
-	 	dos.innerHTML = teta;
-	 	tres.innerHTML = z;
+	 	uno.innerHTML = "r = "+r;
+	 	dos.innerHTML = " θ = "+teta;
+	 	tres.innerHTML =" z = "+z;
 	}
 	else {
-		alert("Jajaja, ¿es enserio?, no intentes engañarme, se que no es verdad")
+		alert ("me dio locha hacer mas, voy a ver si puedo hacer visual el pi");
 	}
 }
 
